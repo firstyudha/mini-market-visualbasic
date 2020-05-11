@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="digital-marketing-1433427_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\digital-marketing-1433427_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shopping-1232944_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shopping-1232944_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="invoice-3739354_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\invoice-3739354_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shopping-879498_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shopping-879498_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TutupBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAExSURBVEhLxdXb
+        TsMwEIThPCe00HIQB8ELlHfvkt/OYMdZJ44ahZHmAtXrr7It2pmXy4/Z1/fwx4oww6yTKfT2bnY4mj2e
+        zO7uza7X4YOZsIa1zDDLHkXGEAuOD2Yvr7Gn8zImhLWaY48CS1CJqHOYh6gFFqEaonrYHKJmWBcuj3P1
+        FuYVpiwhKnv3RhdeCpfoLSrLxh+fsS0IZe/eiEfX+u3o03Os91nZ7BQi1HLeaytkuNf06rbECoQkiGyB
+        OQgZQ+QWrIKQKaTwslovnbKWmUr+Edrl6G5B1AqWoC0Q1cEitCWiBuzwh0VoDcKltz4SYX12/Ke6288E
+        2eWHT6lhHqLMYRlCEkRKLCDp5bgJWL8mxwqEjCHCAs6VS1xCFGHMMFsgZAoRHgivcW2YYXYSs19memWH
+        TdF2JwAAAABJRU5ErkJggg==
+</value>
   </data>
 </root>

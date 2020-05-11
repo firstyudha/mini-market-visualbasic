@@ -47,4 +47,14 @@
         FrmPelanggan.MdiParent = Me
         FrmPelanggan.Show()
     End Sub
+
+    Private Sub PembelianToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PembelianToolStripMenuItem.Click
+        FrmPembelian.MdiParent = Me
+        FrmPembelian.Show()
+    End Sub
+
+    Private Sub HistoryPembelianToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HistoryPembelianToolStripMenuItem.Click
+        FrmHistoryPembelilan.MdiParent = Me
+        FrmHistoryPembelilan.Show()
+    End Sub
 End Class

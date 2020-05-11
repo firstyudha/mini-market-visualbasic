@@ -15,6 +15,22 @@ MiniMarket
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:MiniMarket.My.Resources.Resources.digital_marketing_1433427_1920">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MiniMarket.My.Resources.Resources.invoice_3739354_1920">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MiniMarket.My.Resources.Resources.shopping_1232944_1920">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MiniMarket.My.Resources.Resources.shopping_879498_1920">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="T:MiniMarket.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.

@@ -58,6 +58,7 @@ Partial Class FrmMenuUtama
         Me.TsJam = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TsTanggal = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.HistoryPembelianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -119,36 +120,36 @@ Partial Class FrmMenuUtama
         'KelompokToolStripMenuItem
         '
         Me.KelompokToolStripMenuItem.Name = "KelompokToolStripMenuItem"
-        Me.KelompokToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.KelompokToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
         Me.KelompokToolStripMenuItem.Text = "Kelompok"
         '
         'SatuanToolStripMenuItem
         '
         Me.SatuanToolStripMenuItem.Name = "SatuanToolStripMenuItem"
-        Me.SatuanToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SatuanToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
         Me.SatuanToolStripMenuItem.Text = "Satuan"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(127, 6)
         '
         'BarangToolStripMenuItem
         '
         Me.BarangToolStripMenuItem.Name = "BarangToolStripMenuItem"
-        Me.BarangToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BarangToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
         Me.BarangToolStripMenuItem.Text = "Barang"
         '
         'SuplierToolStripMenuItem
         '
         Me.SuplierToolStripMenuItem.Name = "SuplierToolStripMenuItem"
-        Me.SuplierToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SuplierToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
         Me.SuplierToolStripMenuItem.Text = "Suplier"
         '
         'PelangganToolStripMenuItem
         '
         Me.PelangganToolStripMenuItem.Name = "PelangganToolStripMenuItem"
-        Me.PelangganToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PelangganToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
         Me.PelangganToolStripMenuItem.Text = "Pelanggan"
         '
         'TransaksiToolStripMenuItem
@@ -160,19 +161,20 @@ Partial Class FrmMenuUtama
         '
         'PembelianToolStripMenuItem
         '
+        Me.PembelianToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HistoryPembelianToolStripMenuItem})
         Me.PembelianToolStripMenuItem.Name = "PembelianToolStripMenuItem"
-        Me.PembelianToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.PembelianToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PembelianToolStripMenuItem.Text = "Pembelian"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(127, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(149, 6)
         '
         'PenjualanToolStripMenuItem
         '
         Me.PenjualanToolStripMenuItem.Name = "PenjualanToolStripMenuItem"
-        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PenjualanToolStripMenuItem.Text = "Penjualan"
         '
         'ToolStrip1
@@ -294,10 +296,18 @@ Partial Class FrmMenuUtama
         '
         Me.Timer1.Enabled = True
         '
+        'HistoryPembelianToolStripMenuItem
+        '
+        Me.HistoryPembelianToolStripMenuItem.Name = "HistoryPembelianToolStripMenuItem"
+        Me.HistoryPembelianToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.HistoryPembelianToolStripMenuItem.Text = "History Pembelian"
+        '
         'FrmMenuUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.MiniMarket.My.Resources.Resources.shopping_1232944_1920
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(666, 380)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
@@ -306,6 +316,7 @@ Partial Class FrmMenuUtama
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmMenuUtama"
         Me.Text = "Mini Market"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
@@ -350,5 +361,6 @@ Partial Class FrmMenuUtama
     Friend WithEvents TsJam As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents TsTanggal As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents HistoryPembelianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

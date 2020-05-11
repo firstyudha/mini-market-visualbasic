@@ -16,3 +16,5 @@ E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.pdb
 E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmBarang.resources
 E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmSupplier.resources
 E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmPelanggan.resources
+E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmPembelian.resources
+E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmHistoryPembelilan.resources

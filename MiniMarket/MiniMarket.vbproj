@@ -92,6 +92,12 @@
     <Compile Include="FrmHakAkses.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmHistoryPembelilan.Designer.vb">
+      <DependentUpon>FrmHistoryPembelilan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHistoryPembelilan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmKelompok.Designer.vb">
       <DependentUpon>FrmKelompok.vb</DependentUpon>
     </Compile>
@@ -108,6 +114,12 @@
       <DependentUpon>FrmPelanggan.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmPelanggan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPembelian.Designer.vb">
+      <DependentUpon>FrmPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPembelian.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPengguna.Designer.vb">
@@ -160,6 +172,9 @@
     <EmbeddedResource Include="FrmHakAkses.resx">
       <DependentUpon>FrmHakAkses.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmHistoryPembelilan.resx">
+      <DependentUpon>FrmHistoryPembelilan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmKelompok.resx">
       <DependentUpon>FrmKelompok.vb</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPelanggan.resx">
       <DependentUpon>FrmPelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPembelian.resx">
+      <DependentUpon>FrmPembelian.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPengguna.resx">
       <DependentUpon>FrmPengguna.vb</DependentUpon>
@@ -198,6 +216,18 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice-3739354_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-1232944_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\digital-marketing-1433427_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-879498_1920.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
