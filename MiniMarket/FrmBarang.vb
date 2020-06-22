@@ -116,7 +116,7 @@
                 DGBarang.DataSource = tblbarang
             End If
 
-        ElseIf CariKdBarang.Checked = True Then
+        ElseIf CariNmBarang.Checked = True Then
             tblbarang = Proses.ExecuteQuery("select * from TblBarang where Nama_Barang Like '%" & CariDataTxt.Text & "%' ")
             If tblbarang.Rows.Count = 0 Then
                 DGBarang.DataSource = tblbarang
@@ -222,4 +222,7 @@
 
     End Sub
 
+    Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox1.Enter
+
+    End Sub
 End Class

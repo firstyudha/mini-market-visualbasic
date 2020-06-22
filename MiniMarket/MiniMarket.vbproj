@@ -86,6 +86,12 @@
     <Compile Include="FrmBarang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBayar.Designer.vb">
+      <DependentUpon>FrmBayar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBayar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmHakAkses.Designer.vb">
       <DependentUpon>FrmHakAkses.vb</DependentUpon>
     </Compile>
@@ -96,6 +102,12 @@
       <DependentUpon>FrmHistoryPembelilan.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmHistoryPembelilan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHistoryPenjualan.Designer.vb">
+      <DependentUpon>FrmHistoryPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHistoryPenjualan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmKelompok.Designer.vb">
@@ -126,6 +138,12 @@
       <DependentUpon>FrmPengguna.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmPengguna.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPenjualan.Designer.vb">
+      <DependentUpon>FrmPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPenjualan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSatuan.Designer.vb">
@@ -169,11 +187,17 @@
     <EmbeddedResource Include="FrmBarang.resx">
       <DependentUpon>FrmBarang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBayar.resx">
+      <DependentUpon>FrmBayar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHakAkses.resx">
       <DependentUpon>FrmHakAkses.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHistoryPembelilan.resx">
       <DependentUpon>FrmHistoryPembelilan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHistoryPenjualan.resx">
+      <DependentUpon>FrmHistoryPenjualan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKelompok.resx">
       <DependentUpon>FrmKelompok.vb</DependentUpon>
@@ -189,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPengguna.resx">
       <DependentUpon>FrmPengguna.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPenjualan.resx">
+      <DependentUpon>FrmPenjualan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSatuan.resx">
       <DependentUpon>FrmSatuan.vb</DependentUpon>

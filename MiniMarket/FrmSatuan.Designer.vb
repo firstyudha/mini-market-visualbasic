@@ -114,7 +114,7 @@ Partial Class FrmSatuan
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmSatuan"
-        Me.Text = "FrmSatuan"
+        Me.Text = "Satuan"
         CType(Me.DGSatuan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

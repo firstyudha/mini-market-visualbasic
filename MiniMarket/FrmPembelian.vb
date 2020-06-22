@@ -2,14 +2,18 @@
     Dim SQL As String
     Dim Proses As New ClsKoneksi
     Dim tblBeli As DataTable
-    Dim disc As Single    Sub Data_Record()
+    Dim disc As Single
+
+    Sub Data_Record()
         tblBeli = Proses.ExecuteQuery("Select No, Kode_Barang, Nama_Barang, Harga_Beli,Jumlah, Sub_Total From TblPembelian_Rinci where Faktur_Pembelian = '" & LblFaktur.Text & "' order by TblPembelian_Rinci.No asc")
         DGPembelian.DataSource = tblBeli
         DGPembelian.Columns(0).Width = 50
         DGPembelian.Columns(1).Width = 98
         DGPembelian.Columns(2).Width = 150
         DGPembelian.Columns(4).Width = 50
-    End Sub    Sub Suplier()
+    End Sub
+
+    Sub Suplier()
         tblBeli = Proses.ExecuteQuery("Select * From TblSupplier order by Kode_Supplier Asc ")
         If tblBeli.Rows.Count = 0 Then
         Else
@@ -21,7 +25,9 @@
                 Next a
             End With
         End If
-    End Sub    Sub Barang()
+    End Sub
+
+    Sub Barang()
         tblBeli = Proses.ExecuteQuery("Select * From TblBarang order by Kode_Barang Asc ")
         If tblBeli.Rows.Count = 0 Then
         Else
@@ -33,7 +39,9 @@
                 Next a
             End With
         End If
-    End Sub    Sub Bersih()
+    End Sub
+
+    Sub Bersih()
         CmbBarang.Text = ""
         LblNmBarang.Text = ""
         LblHrg.Text = ""
@@ -54,7 +62,9 @@
             Total_seluruh = Val(Total_seluruh) + Val(DGPembelian.Item(5, i).Value)
         Next
         LblTotHrgKotor.Text = Total_seluruh.ToString("#,#")
-    End Sub    Sub Faktur_Otomatis()
+    End Sub
+
+    Sub Faktur_Otomatis()
         tblBeli = Proses.ExecuteQuery("Select * From TblPembelian order by Faktur_Pembelian desc")
         If tblBeli.Rows.Count = 0 Then
             LblFaktur.Text = "0001"
@@ -73,18 +83,26 @@
                 LblFaktur.Text = "" & LblFaktur.Text & ""
             End If
         End If
-    End Sub    Private Sub FrmPembelian_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    End Sub
+
+    Private Sub FrmPembelian_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Call Bersih()
         SimpanBtn.Enabled = False
-    End Sub    Private Sub CmbSuplier_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CmbSupplier.KeyPress
+    End Sub
+
+    Private Sub CmbSuplier_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CmbSupplier.KeyPress
         e.KeyChar = Chr(0)
-    End Sub    Private Sub CmbSuplier_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CmbSupplier.TextChanged
+    End Sub
+
+    Private Sub CmbSuplier_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CmbSupplier.TextChanged
         tblBeli = Proses.ExecuteQuery("Select * From TblSupplier where Kode_Supplier = '" & Mid(CmbSupplier.Text, 1, 6) & "'")
         If tblBeli.Rows.Count = 0 Then
         Else
             LblNmSuplier.Text = tblBeli.Rows(0).Item("Nama_Supplier")
         End If
-    End Sub    Private Sub CmbBarang_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CmbBarang.KeyPress
+    End Sub
+
+    Private Sub CmbBarang_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CmbBarang.KeyPress
         e.KeyChar = Chr(0)
     End Sub
 
@@ -99,13 +117,15 @@
             LblStock.Text = tblBeli.Rows(0).Item("Stock")
             TxtJml.Focus()
         End If
-    End Sub
+    End Sub
+
     Private Sub TxtJml_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TxtJml.KeyPress
         Select Case e.KeyChar
             Case Chr(47) To Chr(57)
                 TxtJml.Focus()
             Case Chr(8)
-                e.KeyChar = Chr(8)            Case Chr(13)
+                e.KeyChar = Chr(8)
+            Case Chr(13)
                 tblBeli = Proses.ExecuteQuery("select * from TblPembelian_Rinci where Faktur_Pembelian = '" & LblFaktur.Text & "' and Kode_Barang = '" & Mid(CmbBarang.Text, 1, 6) & "'")
                 If tblBeli.Rows.Count = 0 Then
                     Dim total = Val(LblHrg.Text) * Val(TxtJml.Text)
@@ -118,22 +138,31 @@
                 Else
                     MsgBox("Proses pembelian tidak dapat dilakukan !")
                 End If
-                Call Bersih()                Dim Total_seluruh As Single
+                Call Bersih()
+                Dim Total_seluruh As Single
                 Dim i As Integer
                 i = DGPembelian.CurrentRow.Index
                 For i = 0 To DGPembelian.Rows.Count - 1
-                    Total_seluruh = Val(Total_seluruh) + Val(DGPembelian.Item(5,i).Value)
+                    Total_seluruh = Val(Total_seluruh) + Val(DGPembelian.Item(5, i).Value)
                 Next
                 LblTotHrgKotor.Text = Total_seluruh.ToString("#,#")
                 disc = (Val(Total_seluruh * (DiscTxt.Text / 100)))
-                LblTotHrgBersih.Text = (Val(Total_seluruh) - Val(disc)).ToString("#,#")            Case Else
+                LblTotHrgBersih.Text = (Val(Total_seluruh) - Val(disc)).ToString("#,#")
+            Case Else
                 e.KeyChar = Chr(0)
         End Select
-    End Sub    Private Sub DiscTxt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DiscTxt.TextChanged
-        If DiscTxt.Text = "" Then DiscTxt.Text = "0"        Dim disc = (Val(LblTotHrgKotor.Text * (DiscTxt.Text / 100)))        LblTotHrgBersih.Text = (LblTotHrgKotor.Text - disc).ToString("#,#")
-    End Sub    Private Sub LblTotHrgBersih_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles LblTotHrgBersih.TextChanged
+    End Sub
+
+    Private Sub DiscTxt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DiscTxt.TextChanged
+        If DiscTxt.Text = "" Then DiscTxt.Text = "0"
+        Dim disc = (Val(LblTotHrgKotor.Text * (DiscTxt.Text / 100)))
+        LblTotHrgBersih.Text = (LblTotHrgKotor.Text - disc).ToString("#,#")
+    End Sub
+
+    Private Sub LblTotHrgBersih_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles LblTotHrgBersih.TextChanged
         If LblTotHrgBersih.Text = "" Then LblTotHrgBersih.Text = "0"
-    End Sub    Private Sub BatalBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    End Sub
+    Private Sub BatalBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error GoTo Keluar
         Dim i As Integer
         i = DGPembelian.CurrentRow.Index
@@ -146,16 +175,20 @@
                 SQL = "update TblBarang set Stock = '" & CInt(Jumlah) & "' where Kode_Barang = '" & DGPembelian.Item(2, i).Value & "'"
                 Proses.ExecuteNonQuery(SQL)
             End If
-        Next        SQL = "delete from TblPembelian_Rinci where Faktur_Pembelian ='" & LblFaktur.Text & "'"
+        Next
+
+        SQL = "delete from TblPembelian_Rinci where Faktur_Pembelian ='" & LblFaktur.Text & "'"
         Proses.ExecuteNonQuery(SQL)
         LblTotHrgKotor.Text = "0"
         DiscTxt.Text = "0"
         LblTotHrgBersih.Text = "0"
         Call Bersih()
 Keluar:
-    End Sub    Private Sub SimpanBtn_Click1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    End Sub
+    Private Sub SimpanBtn_Click1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If LblTotHrgKotor.Text = "0" Then Exit Sub
-        If DiscTxt.Text = "" Then DiscTxt.Text = "0"        SQL = "Insert Into TblPembelian Values ('" & LblFaktur.Text & "','" & Format(Now, "yyyy/MM/dd") & "','" & Microsoft.VisualBasic.Left(CmbSupplier.Text, 6) & "','" & DiscTxt.Text & "','" & Replace(LblTotHrgBersih.Text, ",", "") & "')"
+        If DiscTxt.Text = "" Then DiscTxt.Text = "0"
+        SQL = "Insert Into TblPembelian Values ('" & LblFaktur.Text & "','" & Format(Now, "yyyy/MM/dd") & "','" & Microsoft.VisualBasic.Left(CmbSupplier.Text, 6) & "','" & DiscTxt.Text & "','" & Replace(LblTotHrgBersih.Text, ",", "") & "')"
         Proses.ExecuteNonQuery(SQL)
         Call Bersih()
         CmbSupplier.Text = ""
@@ -164,7 +197,8 @@ Keluar:
         LblTotHrgBersih.Text = "0"
         DiscTxt.Text = "0"
         CmbSupplier.Focus()
-    End Sub
+    End Sub
+
     Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
 
     End Sub
@@ -226,7 +260,9 @@ Keluar:
                 SQL = "update TblBarang set Stock = '" & CInt(Jumlah) & "' where Kode_Barang = '" & DGPembelian.Item(2, i).Value & "'"
                 Proses.ExecuteNonQuery(SQL)
             End If
-        Next        SQL = "delete from TblPembelian_Rinci where Faktur_Pembelian ='" & LblFaktur.Text & "'"
+        Next
+
+        SQL = "delete from TblPembelian_Rinci where Faktur_Pembelian ='" & LblFaktur.Text & "'"
         Proses.ExecuteNonQuery(SQL)
         LblTotHrgKotor.Text = "0"
         DiscTxt.Text = "0"
@@ -235,14 +271,15 @@ Keluar:
 Keluar:
     End Sub
 
-  
+
     Private Sub DGPembelian_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGPembelian.CellContentClick
 
     End Sub
 
     Private Sub SimpanBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpanBtn.Click
         If LblTotHrgKotor.Text = "0" Then Exit Sub
-        If DiscTxt.Text = "" Then DiscTxt.Text = "0"        SQL = "Insert Into TblPembelian Values ('" & LblFaktur.Text & "','" & Format(Now, "yyyy/MM/dd") & "','" & Microsoft.VisualBasic.Left(CmbSupplier.Text, 6) & "','" & DiscTxt.Text & "','" & Replace(LblTotHrgBersih.Text, ",", "") & "')"
+        If DiscTxt.Text = "" Then DiscTxt.Text = "0"
+        SQL = "Insert Into TblPembelian Values ('" & LblFaktur.Text & "','" & Format(Now, "yyyy/MM/dd") & "','" & Microsoft.VisualBasic.Left(CmbSupplier.Text, 6) & "','" & DiscTxt.Text & "','" & Replace(LblTotHrgBersih.Text, ",", "") & "')"
         Proses.ExecuteNonQuery(SQL)
         Call Bersih()
         CmbSupplier.Text = ""
@@ -253,4 +290,5 @@ Keluar:
         CmbSupplier.Focus()
     End Sub
 End Class
-
+
+

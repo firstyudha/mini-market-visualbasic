@@ -27,12 +27,12 @@
 
     Private Sub KdPenggunaTxt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles KdPenggunaTxt.KeyPress
         If e.KeyChar = Chr(13) Then
-            tblLogin = Proses.ExecuteQuery("select * from TblPengguna where kode_pengguna = '" & KdPenggunaTxt.Text & "'")
+            tblLogin = Proses.ExecuteQuery("select * from TblPengguna where Kode_Pengguna = '" & KdPenggunaTxt.Text & "'")
             If tblLogin.Rows.Count = 0 Then
                 MessageBox.Show("Kode tidak ditemukan..!!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 KdPenggunaTxt.Focus()
             Else
-                LevelTxt.Text = tblLogin.Rows(0).Item("level")
+                LevelTxt.Text = tblLogin.Rows(0).Item("Level")
                 PswTxt.Focus()
             End If
         End If
@@ -51,5 +51,9 @@
 
     Private Sub BatalBtkn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BatalBtkn.Click
         End
+    End Sub
+
+    Private Sub KdPenggunaTxt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles KdPenggunaTxt.TextChanged
+
     End Sub
 End Class

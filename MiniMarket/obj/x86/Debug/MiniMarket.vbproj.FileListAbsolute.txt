@@ -18,3 +18,6 @@ E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.Frm
 E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmPelanggan.resources
 E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmPembelian.resources
 E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmHistoryPembelilan.resources
+E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmPenjualan.resources
+E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmBayar.resources
+E:\LP3I BANDUNG\SEMESTER 4\VB\MiniMarket\MiniMarket\obj\x86\Debug\MiniMarket.FrmHistoryPenjualan.resources

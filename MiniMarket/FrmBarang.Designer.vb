@@ -334,7 +334,7 @@ Partial Class FrmBarang
         Me.Controls.Add(Me.BarcodeTxt)
         Me.Controls.Add(Me.KdBarangTxt)
         Me.Name = "FrmBarang"
-        Me.Text = "FrmBarang"
+        Me.Text = "Barang"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DGBarang, System.ComponentModel.ISupportInitialize).EndInit()
