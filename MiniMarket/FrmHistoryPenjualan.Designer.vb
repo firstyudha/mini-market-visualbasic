@@ -43,9 +43,9 @@ Partial Class FrmHistoryPenjualan
         Me.Label2.Location = New System.Drawing.Point(16, 20)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(293, 23)
+        Me.Label2.Size = New System.Drawing.Size(289, 23)
         Me.Label2.TabIndex = 71
-        Me.Label2.Text = "History Transaksi Pembelian"
+        Me.Label2.Text = "History Transaksi Penjualan"
         '
         'DGHistoryPenjualan
         '
